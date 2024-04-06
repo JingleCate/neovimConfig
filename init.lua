@@ -17,9 +17,10 @@ require("plugins/telescope")
 
 if vim.g.vscode then
     -- VSCode extension
-    print("VSCode extension for Neovim...")
+    print("Lauched successfully: VSCode extension for Neovim...")
 else
     -- ctrl + f down, ctrl + b up
     -- ordinary Neovim
-    print("Original Neovim ...")
+    print("Lauched successfully: Original Neovim ...")
 end
+-- some infos

@@ -69,6 +69,8 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim',  -- 文件检索
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  use "folke/neodev.nvim"
   ---------------------------------------------------------------------------------
   if packer_bootstrap then
     require('packer').sync()

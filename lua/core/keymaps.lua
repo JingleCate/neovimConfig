@@ -5,7 +5,7 @@ local keymap = vim.keymap
 
 -- ---------- 插入模式 ---------- ---
 -- i表示插入模式，"jk"表示键位，<ESC>表示原来键位
--- 表示由insert模式转化为normal只需
+-- 表示由insert模式转化为normal只需jk
 keymap.set("i", "jk", "<ESC>")
 
 
@@ -15,9 +15,11 @@ keymap.set("i", "jk", "<ESC>")
 
 -- ---------- 视觉模式 ---------- ---
 -- 单行或多行移动，按住<SHIFT> + j/k即可上下移动
-keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+keymap.set("v", "j", ":m '>+1<cr>gv=gv")
+keymap.set("v", "k", ":m '<-2<cr>gv=gv")
 
+-- 无效？
+-- keymap.set("v", "<C-/>", "gc")
 
 
 
@@ -35,9 +37,12 @@ keymap.set("n", "<leader>nh", ":nohl<CR>")
 keymap.set("n", "9", "$")
 
 -- ---------- 插件 ---------- ---
--- nvim-tree, <空格> + t(tree)
+-- nvim-tree, <space> + t(tree)
 keymap.set("n", "<leader>t", ":NvimTreeToggle<CR>")
 
--- 切换buffer, <SHIFT> + H/L
-keymap.set("n", "<C-L>", ":bnext<CR>")
-keymap.set("n", "<C-H>", ":bprevious<CR>")
+-- 切换buffer 和 tree, <CTRL> + h/l
+keymap.set("n", "<C-l>", ":bnext<CR>")
+keymap.set("n", "<C-h>", ":bprevious<CR>")
+
+-- 无效？
+-- keymap.set("n", "<C><leader>", "gcc")
